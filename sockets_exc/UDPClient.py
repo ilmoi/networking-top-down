@@ -1,6 +1,6 @@
 from socket import *
 
-serverName = 'hostname' #todo
+serverName = '3.21.113.142' #todo
 serverPort = 12000
 
 # create socket
@@ -19,7 +19,6 @@ clientSocket.sendto(message.encode(), (serverName, serverPort))
 # here we receive back the msg and the server addr (contains both IP and port)
 # 2048 = buffer size
 replyFromServer, serverAddress = clientSocket.recvfrom(2048)
-
 print(replyFromServer.decode())
 print(serverAddress)
 
